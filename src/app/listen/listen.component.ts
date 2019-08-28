@@ -9,8 +9,19 @@ export class ListenComponent implements OnInit {
 
   constructor() { }
   ende: number=10;
+  liste: Array<number>;
 
   ngOnInit() {
+  }
+
+  zaehle() {
+    this.liste = [];
+
+    for(let i = 0; i <= this.ende; i++) {
+      this.liste.push (i);
+    }
+    this.liste = this.liste.reverse();
+    this.liste.pop();
   }
 
 }
